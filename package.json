@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Dedesyarifudin07/learnNode/issues"
   },
-  "homepage": "https://github.com/Dedesyarifudin07/learnNode#readme"
+  "homepage": "https://github.com/Dedesyarifudin07/learnNode#readme",
+  "dependencies": {
+    "validator": "^13.7.0"
+  }
 }
