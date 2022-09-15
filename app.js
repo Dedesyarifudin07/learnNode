@@ -1,7 +1,6 @@
 const fs = require('fs');
 
-//readline
-
+//======================================= READLINE =============================================
 const readline = require('readline');
 const rl = readline.createInterface({
     input:process.stdin,
@@ -10,11 +9,11 @@ const rl = readline.createInterface({
 
 rl.question('siapa nama anda', (nama) => {
     rl.question('masukan nomer hp:', (hp) => {
-        //meyiapkan object
+        //=============================== MENYIAPKAN OBJECT =====================================
         const  Contact = {nama,hp};
-        //baca filesystem
+        //=============================== BACA FILESYSTEM =======================================
        const file = fs.readFileSync('data/Contact.json','utf-8')
-       //ubah string ke json
+       //================================ UBAH STRING KE JSON ===================================
         const Contacts = JSON.parse(file);
 
 
@@ -22,7 +21,7 @@ rl.question('siapa nama anda', (nama) => {
 
         console.log(Contact);
 
-        //ubah json ke string
+        //============================== UBAH  JSON KE STRING ======================================
         fs.writeFileSync('data/Contact.json',JSON.stringify(Contacts));
 
         console.log('terima kasih sudah memasukan data');
